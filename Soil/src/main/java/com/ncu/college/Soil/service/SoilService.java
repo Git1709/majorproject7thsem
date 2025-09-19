@@ -18,7 +18,7 @@ public class SoilService {
     private final ModelMapper _ModelMapper;
 
     @Autowired
-    SoilService(ISoilRepository soilRepository, ModelMapper modelMapper) {
+    public SoilService(ISoilRepository soilRepository, ModelMapper modelMapper) {
         this._SoilRepository = soilRepository;
         this._ModelMapper = modelMapper;
     }
