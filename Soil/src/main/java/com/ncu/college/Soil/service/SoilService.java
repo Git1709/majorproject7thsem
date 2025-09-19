@@ -1,6 +1,5 @@
 package com.ncu.college.Soil.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.modelmapper.ModelMapper;
@@ -11,26 +10,38 @@ import com.ncu.college.Soil.dto.SoilDto;
 import com.ncu.college.Soil.irepository.ISoilRepository;
 import com.ncu.college.Soil.model.Soil;
 
-@Service(value = "SoilService")
+@Service
 public class SoilService {
 
-    private final ISoilRepository _SoilRepository;
-    private final ModelMapper _ModelMapper;
+    @Autowired
+    private ISoilRepository soilRepository;
 
     @Autowired
-    public SoilService(ISoilRepository soilRepository, ModelMapper modelMapper) {
-        this._SoilRepository = soilRepository;
-        this._ModelMapper = modelMapper;
-    }
+    private ModelMapper mapper;
 
     public List<SoilDto> GetAllSoils() {
-        List<Soil> soils = _SoilRepository.GetAllSoils();
-        List<SoilDto> soilDtos = new ArrayList<>();
-        for (Soil s : soils) {
-            SoilDto dto = _ModelMapper.map(s, SoilDto.class);
-            soilDtos.add(dto);
+        return soilRepository.GetAllSoils().stream()
+                .map(s -> mapper.map(s, SoilDto.class))
+                .toList();
+    }
 
-        }
-        return soilDtos;
+    public SoilDto GetSoilById(int id) {
+        Soil soil = soilRepository.GetSoilById(id);
+        return soil != null ? mapper.map(soil, SoilDto.class) : null;
+    }
+
+    public int AddSoil(SoilDto dto) {
+        Soil soil = mapper.map(dto, Soil.class);
+        return soilRepository.InsertSoil(soil);
+    }
+
+    public int UpdateSoil(SoilDto dto, int id) {
+        Soil soil = mapper.map(dto, Soil.class);
+        soil.set_Soil_ID(id);
+        return soilRepository.UpdateSoil(soil);
+    }
+
+    public int DeleteSoil(int id) {
+        return soilRepository.DeleteSoil(id);
     }
 }

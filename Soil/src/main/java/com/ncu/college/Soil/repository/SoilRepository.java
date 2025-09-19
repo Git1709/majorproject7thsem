@@ -21,8 +21,37 @@ public class SoilRepository implements ISoilRepository {
     }
 
     @Override
-    public List<Soil> GetAllSoils() {
+    public Soil GetSoilById(int id) {
+        String sql = "SELECT * FROM Soil WHERE Soil_ID = ?";
+        try {
+            return _JdbcTemplate.queryForObject(sql, new SoilRowMapper(), id);
+        } catch (Exception e) {
+            System.out.println("Error fetching soil by id: " + e.getMessage());
+            return null;
+        }
+    }
 
+    @Override
+    public int InsertSoil(Soil soil) {
+        String sql = "INSERT INTO Soil (Soil_Type, Temperature, Humidity, Moisture) VALUES (?, ?, ?, ?)";
+        return _JdbcTemplate.update(sql, soil.get_Soil_Type(), soil.get_Temperature(), soil.get_Humidity(), soil.get_Moisture());
+    }
+
+    @Override
+    public int UpdateSoil(Soil soil) {
+        String sql = "UPDATE Soil SET Soil_Type=?, Temperature=?, Humidity=?, Moisture=? WHERE Soil_ID=?";
+        return _JdbcTemplate.update(sql, soil.get_Soil_Type(), soil.get_Temperature(), soil.get_Humidity(),
+                soil.get_Moisture(), soil.get_Soil_ID());
+    }
+
+    @Override
+    public int DeleteSoil(int id) {
+        String sql = "DELETE FROM Soil WHERE Soil_ID = ?";
+        return _JdbcTemplate.update(sql, id);
+    }
+
+    @Override
+    public List<Soil> GetAllSoils() {
         List<Soil> soils;
         String sql = "SELECT * FROM Soil";
         try {
@@ -33,4 +62,5 @@ public class SoilRepository implements ISoilRepository {
         }
         return soils;
     }
+
 }
