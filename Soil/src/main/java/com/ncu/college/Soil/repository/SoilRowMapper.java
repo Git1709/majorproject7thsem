@@ -15,7 +15,7 @@ public class SoilRowMapper implements RowMapper<Soil> {
         if (rs == null) {
             return null;
         }
-        String _Soil_ID = rs.getString("Soil_ID");
+        int _Soil_ID = rs.getInt("Soil_ID");
         String _Soil_Type = rs.getString("Soil_Type");
         int _Temperature = rs.getInt("Temperature");
         int _Humidity = rs.getInt("Humidity");

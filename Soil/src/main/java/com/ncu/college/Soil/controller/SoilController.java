@@ -25,6 +25,7 @@ public class SoilController {
 
     @GetMapping(path = "/allSoil")
 // at http://localhost:8081/Soils/allSoil/''
+//    http://localhost:8081/Soils/allSoil
     public List<SoilDto> getAllSoil() {
 
         return _SoilService.GetAllSoils();

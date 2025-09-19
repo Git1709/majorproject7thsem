@@ -8,9 +8,6 @@ public class Soil {
     Integer _Humidity;
     Integer _Moisture;
 
-    public Soil(String _Soil_ID1, String _Soil_Type1, int _Temperature1, int _Humidity1, int _Moisture1) {
-    }
-
     public Soil(Integer _Soil_ID, String _Soil_Type, Integer _Temperature, Integer _Humidity, Integer _Moisture) {
         this._Soil_ID = _Soil_ID;
         this._Soil_Type = _Soil_Type;

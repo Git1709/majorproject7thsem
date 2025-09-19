@@ -1,1 +1,9 @@
-com\ncu\college\Soil\SoilApplication.class
+com\ncu\college\Fertilizer\service\FertilizerService.class
+com\ncu\college\Fertilizer\repository\FertilizerRepository.class
+com\ncu\college\Fertilizer\irepository\IFertilizerRepository.class
+com\ncu\college\Fertilizer\FertilizerApplication.class
+com\ncu\college\Fertilizer\controller\FertilizerController.class
+com\ncu\college\Fertilizer\dto\FertilizerDto.class
+com\ncu\college\Fertilizer\model\Fertilizer.class
+com\ncu\college\Fertilizer\repository\FertilizerRowMapper.class
+com\ncu\college\Fertilizer\config\ApplicationConfig.class

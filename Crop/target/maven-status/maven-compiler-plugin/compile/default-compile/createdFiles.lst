@@ -1,1 +1,9 @@
-com\ncu\college\Soil\SoilApplication.class
+com\ncu\college\Crop\controller\CropController.class
+com\ncu\college\Crop\config\ApplicationConfig.class
+com\ncu\college\Crop\irepository\ICropRepository.class
+com\ncu\college\Crop\repository\CropRowMapper.class
+com\ncu\college\Crop\repository\CropRepository.class
+com\ncu\college\Crop\model\Crop.class
+com\ncu\college\Crop\service\CropService.class
+com\ncu\college\Crop\dto\CropDto.class
+com\ncu\college\Crop\CropApplication.class
