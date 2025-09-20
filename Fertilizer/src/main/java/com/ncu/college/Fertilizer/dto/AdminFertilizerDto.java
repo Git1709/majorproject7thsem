@@ -1,17 +1,17 @@
-package com.ncu.college.Fertilizer.model;
+package com.ncu.college.Fertilizer.dto;
 
-public class Fertilizer {
+public class AdminFertilizerDto {
 
-    private Integer soilId;   // Primary key column in DB
+    private Integer soilId;   // Exposed only for admin
     private String fertilizerName;
     private Integer nitrogen;
     private Integer phosphorous;
     private Integer potassium;
 
-    public Fertilizer() {
+    public AdminFertilizerDto() {
     }
 
-    public Fertilizer(Integer soilId, String fertilizerName, Integer nitrogen,
+    public AdminFertilizerDto(Integer soilId, String fertilizerName, Integer nitrogen,
             Integer phosphorous, Integer potassium) {
         this.soilId = soilId;
         this.fertilizerName = fertilizerName;

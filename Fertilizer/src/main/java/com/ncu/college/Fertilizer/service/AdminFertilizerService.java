@@ -7,48 +7,42 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ncu.college.Fertilizer.dto.FertilizerDto;
+import com.ncu.college.Fertilizer.dto.AdminFertilizerDto;
 import com.ncu.college.Fertilizer.irepository.IFertilizerRepository;
 import com.ncu.college.Fertilizer.model.Fertilizer;
 
 @Service
-public class FertilizerService {
+public class AdminFertilizerService {
 
     private final IFertilizerRepository fertilizerRepository;
     private final ModelMapper modelMapper;
 
     @Autowired
-    public FertilizerService(IFertilizerRepository fertilizerRepository, ModelMapper modelMapper) {
+    public AdminFertilizerService(IFertilizerRepository fertilizerRepository, ModelMapper modelMapper) {
         this.fertilizerRepository = fertilizerRepository;
         this.modelMapper = modelMapper;
     }
 
-    public List<FertilizerDto> getAllFertilizers() {
+    public List<AdminFertilizerDto> getAllFertilizers() {
         return fertilizerRepository.getAllFertilizers().stream()
-                .map(f -> modelMapper.map(f, FertilizerDto.class))
+                .map(f -> modelMapper.map(f, AdminFertilizerDto.class))
                 .collect(Collectors.toList());
     }
 
-    public FertilizerDto getFertilizerById(int id) {
+    public AdminFertilizerDto getFertilizerById(int id) {
         Fertilizer f = fertilizerRepository.getFertilizerById(id);
-        return modelMapper.map(f, FertilizerDto.class);
+        return modelMapper.map(f, AdminFertilizerDto.class);
     }
 
-    public List<FertilizerDto> getFertilizersByNitrogen(int min) {
-        return fertilizerRepository.getFertilizersByNitrogen(min).stream()
-                .map(f -> modelMapper.map(f, FertilizerDto.class))
-                .collect(Collectors.toList());
-    }
-
-    public FertilizerDto addFertilizer(FertilizerDto dto) {
+    public AdminFertilizerDto addFertilizer(AdminFertilizerDto dto) {
         Fertilizer f = modelMapper.map(dto, Fertilizer.class);
         fertilizerRepository.insertFertilizer(f);
         return dto;
     }
 
-    public FertilizerDto updateFertilizer(int id, FertilizerDto dto) {
+    public AdminFertilizerDto updateFertilizer(int id, AdminFertilizerDto dto) {
         Fertilizer f = modelMapper.map(dto, Fertilizer.class);
-        f.setSoilId(id);  // Fixed to match DB primary key
+        f.setSoilId(id);
         fertilizerRepository.updateFertilizer(f);
         return dto;
     }

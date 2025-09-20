@@ -1,15 +1,15 @@
-package com.ncu.college.Crop.model;
+package com.ncu.college.Crop.dto;
 
-public class Crop {
+public class AdminCropDto {
 
-    private Integer soilId;  // new field
+    private Integer soilId;
     private String cropName;
     private Double yieldKgPerHectare;
 
-    public Crop() {
+    public AdminCropDto() {
     }
 
-    public Crop(Integer soilId, String cropName, Double yieldKgPerHectare) {
+    public AdminCropDto(Integer soilId, String cropName, Double yieldKgPerHectare) {
         this.soilId = soilId;
         this.cropName = cropName;
         this.yieldKgPerHectare = yieldKgPerHectare;

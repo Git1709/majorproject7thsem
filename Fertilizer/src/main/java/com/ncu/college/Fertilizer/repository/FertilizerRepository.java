@@ -27,7 +27,7 @@ public class FertilizerRepository implements IFertilizerRepository {
 
     @Override
     public Fertilizer getFertilizerById(int id) {
-        String sql = "SELECT * FROM Fertilizer WHERE Fertilizer_ID = ?";
+        String sql = "SELECT * FROM Fertilizer WHERE Soil_ID = ?";
         return jdbcTemplate.queryForObject(sql, new FertilizerRowMapper(), id);
     }
 
@@ -49,18 +49,18 @@ public class FertilizerRepository implements IFertilizerRepository {
 
     @Override
     public int updateFertilizer(Fertilizer fertilizer) {
-        String sql = "UPDATE Fertilizer SET Fertilizer_Name=?, Nitrogen=?, Phosphorous=?, Potassium=? WHERE Fertilizer_ID=?";
+        String sql = "UPDATE Fertilizer SET Fertilizer_Name=?, Nitrogen=?, Phosphorous=?, Potassium=? WHERE Soil_ID=?";
         return jdbcTemplate.update(sql,
                 fertilizer.getFertilizerName(),
                 fertilizer.getNitrogen(),
                 fertilizer.getPhosphorous(),
                 fertilizer.getPotassium(),
-                fertilizer.getFertilizerId());
+                fertilizer.getSoilId());  // Fixed here
     }
 
     @Override
     public int deleteFertilizer(int id) {
-        String sql = "DELETE FROM Fertilizer WHERE Fertilizer_ID=?";
+        String sql = "DELETE FROM Fertilizer WHERE Soil_ID=?";
         return jdbcTemplate.update(sql, id);
     }
 }

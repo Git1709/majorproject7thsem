@@ -32,12 +32,6 @@ public class CropRepository implements ICropRepository {
     }
 
     @Override
-    public int insertCrop(Crop crop) {
-        String sql = "INSERT INTO crops (Crop_Name, Yield_kg_per_Hectare) VALUES (?, ?)";
-        return jdbcTemplate.update(sql, crop.getCropName(), crop.getYieldKgPerHectare());
-    }
-
-    @Override
     public int updateCrop(Crop crop) {
         String sql = "UPDATE crops SET Yield_kg_per_Hectare=? WHERE Crop_Name=?";
         return jdbcTemplate.update(sql, crop.getYieldKgPerHectare(), crop.getCropName());
@@ -53,5 +47,13 @@ public class CropRepository implements ICropRepository {
     public List<Crop> getCropsByYield(Double minYield) {
         String sql = "SELECT * FROM crops WHERE Yield_kg_per_Hectare >= ?";
         return jdbcTemplate.query(sql, new CropRowMapper(), minYield);
+
     }
+
+    @Override
+    public int insertCrop(Crop crop) {
+        String sql = "INSERT INTO crops (Crop_Name, Yield_kg_per_Hectare) VALUES (?, ?)";
+        return jdbcTemplate.update(sql, crop.getCropName(), crop.getYieldKgPerHectare());
+    }
+
 }

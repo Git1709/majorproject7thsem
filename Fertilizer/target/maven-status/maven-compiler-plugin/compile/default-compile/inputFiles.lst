@@ -1,9 +1,12 @@
 C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizer\src\main\java\com\ncu\college\Fertilizer\config\ApplicationConfig.java
+C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizer\src\main\java\com\ncu\college\Fertilizer\controller\AdminFertilizerController.java
 C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizer\src\main\java\com\ncu\college\Fertilizer\controller\FertilizerController.java
+C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizer\src\main\java\com\ncu\college\Fertilizer\dto\AdminFertilizerDto.java
 C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizer\src\main\java\com\ncu\college\Fertilizer\dto\FertilizerDto.java
 C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizer\src\main\java\com\ncu\college\Fertilizer\FertilizerApplication.java
 C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizer\src\main\java\com\ncu\college\Fertilizer\irepository\IFertilizerRepository.java
 C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizer\src\main\java\com\ncu\college\Fertilizer\model\Fertilizer.java
 C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizer\src\main\java\com\ncu\college\Fertilizer\repository\FertilizerRepository.java
 C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizer\src\main\java\com\ncu\college\Fertilizer\repository\FertilizerRowMapper.java
+C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizer\src\main\java\com\ncu\college\Fertilizer\service\AdminFertilizerService.java
 C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizer\src\main\java\com\ncu\college\Fertilizer\service\FertilizerService.java

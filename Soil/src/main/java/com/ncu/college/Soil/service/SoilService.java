@@ -6,6 +6,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.ncu.college.Soil.dto.SoilAdminDto;
 import com.ncu.college.Soil.dto.SoilDto;
 import com.ncu.college.Soil.irepository.ISoilRepository;
 import com.ncu.college.Soil.model.Soil;
@@ -43,5 +44,19 @@ public class SoilService {
 
     public int DeleteSoil(int id) {
         return soilRepository.DeleteSoil(id);
+
     }
+
+    //-----Admin-
+    public List<SoilAdminDto> GetAllSoilsWithId() {
+        return soilRepository.GetAllSoils().stream()
+                .map(s -> mapper.map(s, SoilAdminDto.class))
+                .toList();
+    }
+
+    public SoilAdminDto GetSoilByIdWithId(int id) {
+        Soil soil = soilRepository.GetSoilById(id);
+        return soil != null ? mapper.map(soil, SoilAdminDto.class) : null;
+    }
+
 }
