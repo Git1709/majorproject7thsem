@@ -2,9 +2,11 @@ package com.ncu.college.Fertilizer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@EnableDiscoveryClient
 @ComponentScan(basePackages = "com.ncu.college.Fertilizer")
 public class FertilizerApplication {
 

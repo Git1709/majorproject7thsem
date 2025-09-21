@@ -8,7 +8,7 @@ public class FertilizerDataDto {
     private Integer moisture;
     private String soilType;
     private String cropType;
-    
+
     private Double yieldKgPerHectare;
     private Integer nitrogen;
     private Integer potassium;
