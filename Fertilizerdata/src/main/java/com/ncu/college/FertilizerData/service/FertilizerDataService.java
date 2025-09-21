@@ -10,9 +10,9 @@ import com.ncu.college.FertilizerData.dto.CropDtoFromService;
 import com.ncu.college.FertilizerData.dto.FertilizerDataDto;
 import com.ncu.college.FertilizerData.dto.FertilizerDtoFromService;
 import com.ncu.college.FertilizerData.dto.SoilDtoFromService;
-import com.ncu.college.FertilizerData.repository.ICropRepository;
-import com.ncu.college.FertilizerData.repository.IFertilizerRepository;
-import com.ncu.college.FertilizerData.repository.ISoilRepository;
+import com.ncu.college.FertilizerData.irepository.ICropRepository;
+import com.ncu.college.FertilizerData.irepository.IFertilizerRepository;
+import com.ncu.college.FertilizerData.irepository.ISoilRepository;
 
 @Service
 public class FertilizerDataService {

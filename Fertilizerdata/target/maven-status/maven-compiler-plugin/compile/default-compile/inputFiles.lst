@@ -5,9 +5,9 @@ C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\servic
 C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizerdata\src\main\java\com\ncu\college\FertilizerData\dto\FertilizerDtoFromService.java
 C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizerdata\src\main\java\com\ncu\college\FertilizerData\dto\SoilDtoFromService.java
 C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizerdata\src\main\java\com\ncu\college\FertilizerData\FertilizerDataApplication.java
+C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizerdata\src\main\java\com\ncu\college\FertilizerData\irepository\ICropRepository.java
+C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizerdata\src\main\java\com\ncu\college\FertilizerData\irepository\IFertilizerRepository.java
+C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizerdata\src\main\java\com\ncu\college\FertilizerData\irepository\ISoilRepository.java
 C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizerdata\src\main\java\com\ncu\college\FertilizerData\model\FertilizerData.java
 C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizerdata\src\main\java\com\ncu\college\FertilizerData\repository\FertilizerDataRowMapper.java
-C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizerdata\src\main\java\com\ncu\college\FertilizerData\repository\ICropRepository.java
-C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizerdata\src\main\java\com\ncu\college\FertilizerData\repository\IFertilizerRepository.java
-C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizerdata\src\main\java\com\ncu\college\FertilizerData\repository\ISoilRepository.java
 C:\Users\Rachit\OneDrive - The Northcap university\Documents\MajorProject\services\Fertilizerdata\src\main\java\com\ncu\college\FertilizerData\service\FertilizerDataService.java

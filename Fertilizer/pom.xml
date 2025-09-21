@@ -12,7 +12,7 @@
     </parent>
 
     <groupId>com.ncu.college.Fertilizer</groupId>
-    <artifactId>soilservice</artifactId>
+    <artifactId>fertilizerservice</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 

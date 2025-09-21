@@ -1,13 +1,13 @@
-com\ncu\college\FertilizerData\repository\ICropRepository.class
 com\ncu\college\FertilizerData\FertilizerDataApplication.class
-com\ncu\college\FertilizerData\repository\ISoilRepository.class
+com\ncu\college\FertilizerData\irepository\IFertilizerRepository.class
 com\ncu\college\FertilizerData\dto\FertilizerDataDto.class
 com\ncu\college\FertilizerData\controller\FertilizerDataController.class
 com\ncu\college\FertilizerData\model\FertilizerData.class
 com\ncu\college\FertilizerData\dto\CropDtoFromService.class
 com\ncu\college\FertilizerData\repository\FertilizerDataRowMapper.class
+com\ncu\college\FertilizerData\irepository\ICropRepository.class
+com\ncu\college\FertilizerData\irepository\ISoilRepository.class
 com\ncu\college\FertilizerData\service\FertilizerDataService.class
-com\ncu\college\FertilizerData\repository\IFertilizerRepository.class
 com\ncu\college\FertilizerData\config\ApplicationConfig.class
 com\ncu\college\FertilizerData\dto\FertilizerDtoFromService.class
 com\ncu\college\FertilizerData\dto\SoilDtoFromService.class
