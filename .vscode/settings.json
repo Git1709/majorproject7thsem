@@ -1,6 +1,3 @@
 {
-    "java.compile.nullAnalysis.mode": "disabled",
-    "java.project.sourcePaths": [
-        "Fertilizerdata/src/main/java/com/ncu/college/FertilizerData"
-    ]
+    "java.compile.nullAnalysis.mode": "disabled"
 }
